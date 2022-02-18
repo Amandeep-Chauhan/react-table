@@ -6,9 +6,7 @@ export const COLUMNS = [
 	},
 	{
 		Header: 'Name',
-		accessor: 'name',
-		// Cell: ({value})=>{return value.slice(0, 8)},
-		
+		accessor: 'name',		
 	},
 	{
 		Header: 'Email',
@@ -32,7 +30,7 @@ export const COLUMNS = [
 	},
 	{
 		Header: 'button',
-		accessor: "id",
-		Cell: ({value})=>{return <button onClick={()=>{console.log(value)}}>button</button>},
+		accessor: "o",
+		Cell: ({ row : {original} })=>( <button onClick={()=>{alert("Name : " + original.name)}}>button</button>),
 	}
 ]
